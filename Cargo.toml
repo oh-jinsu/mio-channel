@@ -1,6 +1,6 @@
 [package]
 name = "mio_channel"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Provide a wrapper of the standard channel that can be polled with Mio."
 authors = ["ohjinsu@codersproduct.com"]

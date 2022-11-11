@@ -1,8 +1,5 @@
 #[cfg(test)]
 mod tests {
-    use mio;
-    use mio_channel::channel;
-
     const CHANNEL: mio::Token = mio::Token(0);
 
     #[test]
@@ -11,7 +8,7 @@ mod tests {
 
         let mut events = mio::Events::with_capacity(2);
 
-        let (tx, mut rx) = channel();
+        let (tx, mut rx) = mio_channel::channel();
 
         poll.registry().register(&mut rx, CHANNEL, mio::Interest::READABLE)?;
 
