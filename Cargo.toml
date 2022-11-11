@@ -1,10 +1,11 @@
 [package]
 name = "mio_channel"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Provide a wrapper of the standard channel that can be polled with Mio."
 authors = ["ohjinsu@codersproduct.com"]
 license = "MIT"
+include = ["/src", "Cargo.toml", "LICENSE", "README.md", "CHANGELOG.md"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

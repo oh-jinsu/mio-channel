@@ -7,8 +7,6 @@
 //! ```rust
 //! #[cfg(test)]
 //! mod tests {
-//!     use mio;
-//!
 //!     const CHANNEL: mio::Token = mio::Token(0);
 //!
 //!     #[test]
