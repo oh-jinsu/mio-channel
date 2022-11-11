@@ -9,3 +9,7 @@
 ## 0.1.2
 
 - Include only specified files.
+
+## 0.1.3
+
+- Improve the manifest.

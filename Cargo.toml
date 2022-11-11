@@ -1,13 +1,15 @@
 [package]
 name = "mio_channel"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description = "Provide a wrapper of the standard channel that can be polled with Mio."
 authors = ["ohjinsu@codersproduct.com"]
+documentation = "https://docs.rs/mio_channel"
+repository = "https://github.com/oh-jinsu/mio_channel"
+readme = "README.md"
+keywords = ["channel", "non-blocking"]
 license = "MIT"
 include = ["/src", "Cargo.toml", "LICENSE", "README.md", "CHANGELOG.md"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 mio = { version = "0.8.5", features = ["os-poll", "net"] }
