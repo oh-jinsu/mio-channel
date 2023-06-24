@@ -38,4 +38,4 @@
 
 mod channel;
 
-pub use channel::{channel, Sender, Receiver};
+pub use channel::{channel, sync_channel, Sender, SyncSender, Receiver};
