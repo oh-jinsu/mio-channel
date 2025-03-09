@@ -130,6 +130,21 @@ impl<T> SyncSender<T> {
 
         Ok(())
     }
+
+    /// Try to send a value. It works just like [`mpsc::SyncSender::try_send`].
+    /// After sending it, it's waking up the [`mio::poll::Poll`].
+    ///
+    /// Note that it does not return any I/O error even if it occurs
+    /// when waking up the [`mio::poll::Poll`].
+    pub fn try_send(&self, t: T) -> Result<(), mpsc::TrySendError<T>> {
+        self.tx.try_send(t)?;
+
+        if let Some(waker) = &mut *self.waker.lock().unwrap() {
+            let _ = waker.wake();
+        }
+
+        Ok(())
+    }
 }
 
 impl<T> Clone for SyncSender<T> {
