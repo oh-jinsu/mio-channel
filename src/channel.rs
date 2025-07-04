@@ -117,7 +117,7 @@ pub struct SyncSender<T> {
 
 impl<T> SyncSender<T> {
     /// Try to send a value. It works just like [`mpsc::SyncSender::send`].
-    /// After sending it, it's waking upthe [`mio::poll::Poll`].
+    /// After sending it, it's waking up the [`mio::poll::Poll`].
     ///
     /// Note that it does not return any I/O error even if it occurs
     /// when waking up the [`mio::poll::Poll`].

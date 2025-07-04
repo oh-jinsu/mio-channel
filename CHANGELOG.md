@@ -13,3 +13,7 @@
 ## 0.1.3
 
 - Improve the manifest.
+
+## 0.2.0
+
+- Bump the mio dependency version to 1.0.4
